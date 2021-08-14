@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,10 +8,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
 
     <style>
-        html, body {
+         html,
+        body {
             height: 100%;
             margin: 0;
         }
@@ -25,7 +27,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .navbar {
             height: 55px;
             position: fixed;
@@ -68,7 +70,7 @@
             border: 1px solid rgb(220, 220, 220);
             border-radius: 3px;
             margin-top: 90px;
-            margin-left: 20%;
+            margin-left: 32%;
             padding: 10px;
         }
 
@@ -90,12 +92,209 @@
             margin-top: 5px;
         }
 
+        .post-card {
+            background-color: white;
+            border: 1px solid rgb(220, 220, 220);
+            border-radius: 3px;
+            margin-top: 20px;
+            margin-left: 32%;
+            background-color: white;
+            padding: 10px;
+
+            width: 600px;
+        }
+
+
+        .post-profile-image {
+            border-radius: 50%;
+            height: 32px;
+            width: 32px;
+        }
+
+        .post-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .post-title-details {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .post-username {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .post-location {
+            color: rgb(138, 135, 135);
+            font-size: 12;
+        }
+
+        .post-image {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .intraction-icons {
+            font-size: 27px;
+            margin-top: 10px;
+            color: #444444;
+            font-weight: 100;
+        }
+        .desc {
+            margin-top: 10px;
+        }
+
+        .input-box {
+            border: none;
+            padding: 5px;
+            width: 150px;
+        }
+
+        .add-post {
+            float: right;
+            color: rgb(0, 149, 246);
+            font-weight: 600;
+            padding-right: 10px;
+
+
+        }
+
+        .right-icons {
+            float: right;
+        }
+
+        .right {
+            width: 400px;
+            background-color: #444444;
+            height: 300px;
+        }
+        .bg-dark {
+            display: flex;
+            width: 100%;
+            height: auto;
+        }
+
+        .left {
+            width: 60%;
+            height: auto;
+        }
+
+        .right-box {
+            width: 295px;
+            margin-top: 90px;
+            margin-left: 10px;
+            height: 100vh;
+            background-color: transparent;
+            padding-top: 25px;
+            position: fixed;
+            top: .2%;
+            left: 920px;
+            
+        }
+
+        .profile-section{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .profile-section > img{
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .profile-section > div{
+            line-height: 2px;
+            font-size: 15px;
+        }
+
+        .profile-section > a{
+            color: #0095f6;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        #alag-text{
+            color: gray;
+            font-size: 12px;
+        }
+
+        .suggest-head{
+            width: 90%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            align-items: baseline;
+        }
+        #gray-suggest{
+            font-size: 16px;
+            color: gray;
+        }
+        #gray-suggest+p{
+            font-size: 12px;
+        }
+
+
+
+
+        .sugeestions{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .sugeestions > img{
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .sugeestions > div{
+            line-height: 2px;
+            font-size: 15px;
+        }
+
+        .sugeestions > a{
+            color: #0095f6;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+
+        .footer{
+            color: gray;
+            width: 90%;
+            margin: 10px auto;
+            font-size: 12px;
+        }
+
+        footer{
+            width: 90%;
+            color: gray;
+            margin: 10px auto;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+
+       
     </style>
 </head>
+
 <body>
     <nav class="navbar flex">
         <div class="nav-content flex">
-            <img class="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
+            <img class="logo"
+                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
             <input class="nav-search" type="text" placeholder="Search">
             <div>
                 <span class="material-icons nav-icons">home</span>
@@ -106,25 +305,291 @@
         </div>
     </nav>
 
-    <main>
+    <main class="bg-dark">
         <!-- LEFT SIDE STARTS -->
         <div class="left">
             <div class="stories-box flex">
                 <!-- One story -->
                 <div class="story">
-                    <img class="story-image" src="https://i.pravatar.cc/56?u=1235">
+
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=1334">
                     <span class="story-username">pune_times</span>
                 </div>
 
                 <div class="story">
-                    <img class="story-image" src="https://i.pravatar.cc/56?u=12346">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=15341">
                     <span class="story-username">disney-plus</span>
                 </div>
 
                 <div class="story">
-                    <img class="story-image" src="https://i.pravatar.cc/56?u=12347">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=16342">
                     <span class="story-username">masaischool</span>
                 </div>
 
                 <div class="story">
-                   
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=25243">
+                    <span class="story-username">animalwalefare</span>
+                </div>
+
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=22344">
+                    <span class="story-username">hotstart_vip</span>
+                </div>
+
+                <div class="story">
+                    <img class="story-image" src="https://i.pravatar.cc/56?u=14346">
+                    <span class="story-username">cool_guy</span>
+                </div>
+            </div>
+
+
+
+
+            <!--- post-card -->
+            <div class="post-card">
+                <div class="post-title">
+                    <img src="https://i.pravatar.cc/56?u=12941" class="post-profile-image" alt="">
+                    <span class="post-title-details">
+                        <span class="post-username">Alok</span>
+                        <span class="post-location">Shakya</span>
+                    </span>
+                </div>
+                <!-- post-image-->
+                <div>
+                    <img src="https://media.istockphoto.com/photos/business-can-not-wait-picture-id1221204650?k=6&m=1221204650&s=612x612&w=0&h=68iI36D3ShMdLnUUE2cGoLl5x80dwbtj6D4INYn-qds="
+                     class="post-image" alt="software developer">
+                </div>
+                <!-- image-details-->
+                <div class="intraction-icons">
+                    <span class="material-icons-outlined">favorite_border </span>
+                    <span class="material-icons-outlined"> chat</span>
+                    <span class="material-icons-outlined"> send </span>
+                    <span class="material-icons-outlined right-icons"> bookmark_added </span>
+
+                </div>
+                <div class="starts">
+                    <img class="story-image" src="https://i.pravatar.cc/20?u=12991" alt="Alok Kumar">
+                    Liked By<strong>Alok Kumar </strong>and 789 more
+                </div>
+
+                <div class="desc">
+                    <strong class="thiner-text">pune_times</strong> welcome to my post </collage>
+                </div>
+                <div class="view-all-comment">
+                    <span>view all 8comments..</span>
+                </div>
+                <div class="comments">
+                    <b>bard_sam</b> &nbsp<span>😂..</span><br>
+                    <span><b>sam &nbsp</b></span>nice 🤣
+                </div>
+                <div class="duration-post">
+                    <span>5 hours Ago</span>
+                </div>
+                <hr>
+                <div class="new-comments">
+                    <span class="material-icons-outlined">
+                        sentiment_satisfied_alt
+                    </span>
+                    <input type="text" placeholder="Add a comments" class="input-box">
+                    <span class="add-post">Add Post..</span>
+
+                </div>
+            </div>
+            <!--- post-card -->
+
+
+            <div class="post-card">
+                <div class="post-title">
+                    <img src="https://i.pravatar.cc/56?u=72941" class="post-profile-image" alt="">
+                    <span class="post-title-details">
+                        <span class="post-username">Amarjeet</span>
+                        <span class="post-location">Azam</span>
+                    </span>
+                </div>
+                <!-- post-image-->
+                <div>
+                    <img src="https://media.istockphoto.com/photos/female-it-developer-at-workplace-picture-id1255905237?k=6&m=1255905237&s=612x612&w=0&h=zLDJgqxoNy_VOrEP1ocRP4h9KQpZ-ZSoTxrEB9qhFdc=" class="post-image" alt="">
+                </div>
+                <!-- image-details-->
+                <div class="intraction-icons">
+                    <span class="material-icons-outlined">favorite_border </span>
+                    <span class="material-icons-outlined"> chat</span>
+                    <span class="material-icons-outlined"> send </span>
+                    <span class="material-icons-outlined right-icons"> bookmark_added </span>
+
+                </div>
+                <div class="starts">
+                    <img class="story-image" src="https://i.pravatar.cc/20?u=12301" alt="">
+                    Liked By<strong>Shivam verma </strong>and 1,453 more
+                </div>
+
+                <div class="desc">
+                    <strong class="thiner-text">delhi_times</strong> welcome to delhi times </collage>
+                </div>
+                <div class="view-all-comment">
+                    <span>view all 9comments..</span>
+                </div>
+                <div class="comments">
+                    <b>sam_tech</b> &nbsp<span>😂..</span><br>
+                    <span><b>sam &nbsp</b></span>nice 🤣
+                </div>
+                <div class="duration-post">
+                    <span>3 hours Ago</span>
+                </div>
+                <hr>
+                <div class="new-comments">
+                    <span class="material-icons-outlined">
+                        sentiment_satisfied_alt
+                    </span>
+                    <input type="text" placeholder="Add a comments" class="input-box">
+                    <span class="add-post">Add Post..</span>
+
+                </div>
+            </div>
+
+
+
+            <!-- post card  -->
+
+
+            <div class="post-card">
+                <div class="post-title">
+                    <img src="https://i.pravatar.cc/56?u=62941" class="post-profile-image" alt="">
+                    <span class="post-title-details">
+                        <span class="post-username">Mohan</span>
+                        <span class="post-location">Agra</span>
+                    </span>
+                </div>
+                <!-- post-image-->
+                <div>
+                    <img src="https://media.istockphoto.com/photos/website-design-developing-programming-and-coding-technologies-picture-id1197640540?k=6&m=1197640540&s=612x612&w=0&h=G0Uc9MDibSDSQz5jasOagxtoitdZKu0k2Nqzxh7NNR4=
+                    " class="post-image" alt="">
+                </div>
+                <!-- image-details-->
+                <div class="intraction-icons">
+                    <span class="material-icons-outlined">favorite_border </span>
+                    <span class="material-icons-outlined"> chat</span>
+                    <span class="material-icons-outlined"> send </span>
+                    <span class="material-icons-outlined right-icons"> bookmark_added </span>
+
+                </div>
+                <div class="starts">
+                    <img class="story-image" src="https://i.pravatar.cc/20?u=15991" alt="">
+                    Liked By<strong>kuldeep </strong>and 579 more..
+                </div>
+
+                <div class="desc">
+                    <strong class="thiner-text">sagar_tech</strong> welcome to my sagar_tech </collage>
+                </div>
+                <div class="view-all-comment">
+                    <span>view all 45 comments..</span>
+                </div>
+                <div class="comments">
+                    <b>manchoo_verma</b> &nbsp<span>😂.</span><br>
+                    <span><b>sam &nbsp</b></span>nice 🤣
+                </div>
+                <div class="duration-post">
+                    <span>6 hours Ago</span>
+                </div>
+                <hr>
+                <div class="new-comments">
+                    <span class="material-icons-outlined">
+                        sentiment_satisfied_alt
+                    </span>
+                    <input type="text" placeholder="Add a comments" class="input-box">
+                    <span class="add-post">Add Post..</span>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- LEFT SIDE ENDS -->
+        
+        <!-- RIGHT SIDE STARTS -->
+        <div class="right-box">
+            <div class="profile-section">
+                <img src="https://i.pravatar.cc/20?u=13566" alt="devehs verma" />
+                <div class="details">
+                    <p><b>Devesh-verma1530</b></p>
+                    <p id="alag-text">Suri Corner (London)</p>
+                </div>
+                <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Switch</strong></a>
+            </div>
+            <div class="suggest-head">
+                <p id="gray-suggest">Suggestions For You</p>
+                <p>See All</p>
+            </div>
+            <div class="">
+                <div class="sugeestions">
+                    <img src="https://i.pravatar.cc/56?u=1346569" alt="devendra yadav" />
+                    <div class="details">
+                        <p><b>Devendra-yadav420</b></p>
+                        <p id="alag-text">Follows you</p>
+                    </div>
+                    <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Follow</strong></a>
+                </div>
+                <div class="sugeestions">
+                    <img src="https://i.pravatar.cc/56?u=1234452" alt="" />
+                    <div class="details">
+                        <p><b>Alok Shakya</b></p>
+                        <p id="alag-text">Follows you</p>
+                    </div>
+                    <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Follow</strong></a>
+                </div>
+                <div class="sugeestions">
+                    <img src="https://i.pravatar.cc/56?u=12855343" alt="" />
+                    <div class="details">
+                        <p><b>kadar-khan34</b></p>
+                        <p id="alag-text">Follows you</p>
+                    </div>
+
+                    <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Follow</strong></a>
+                </div>
+                <div class="sugeestions">
+                    <img src="https://i.pravatar.cc/56?u=1234551" alt="" />
+                    <div class="details">
+                        <p><b>Sursuri-me23</b></p>
+                        <p id="alag-text">Follows you</p>
+                    </div>
+                    <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Follow</strong></a>
+                </div>
+                <div class="sugeestions">
+                    <img src="https://i.pravatar.cc/56?u=15492343" alt="" />
+                    <div class="details">
+                        <p><b>Avneesh-patel23</b></p>
+                        <p id="alag-text">Follows you</p>
+                    </div>
+                    <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Follow</strong></a>
+                </div>
+                <div class="sugeestions">
+                    <img src="https://i.pravatar.cc/56?u=12348" alt="" />
+                    <div class="details">
+                        <p><b>shivam-verma23</b></p>
+                        <p id="alag-text">Follows you</p>
+                    </div>
+                    <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Follow</strong></a>
+                </div>
+                <div class="sugeestions">
+                    <img src="https://i.pravatar.cc/56?u=1246944" alt="" />
+                    <div class="details">
+                        <p><b>shivangi-verma66</b></p>
+                        <p id="alag-text">Follows you</p>
+                    </div>
+                    <a href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Follow</strong></a>
+                </div>
+            </div>
+            <div class="footer">
+                About  Help Press  API   Jobs  Privacy Terms  Locations  Top Accounts Hashtags
+                Language English
+                
+            </div>
+
+            <footer><p>© 2021 INSTAGRAM FROM FACEBOOK
+            </p></footer>
+        </div>
+        <!-- SIDE CONTAINER  end-->
+    </main>
+</body>
+
+</html>
